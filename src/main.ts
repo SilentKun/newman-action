@@ -52,7 +52,7 @@ async function outputSummary(summary: newman.NewmanRunSummary): Promise<void> {
     }
   })
 
-  core.setOutput('summary', JSON.stringify(result))
+  core.setOutput('summary',  `Total: ${summary.run.stats.assertions.total} Failed: ${summary.run.stats.assertions.failed}`)
 }
 
 export interface FailureSummary {
