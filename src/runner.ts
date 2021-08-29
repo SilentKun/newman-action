@@ -62,7 +62,12 @@ export async function createOptions(): Promise<newman.NewmanRunOptions> {
         core.getInput('suppressExitCode')
       ),
       reporters: utils.getStringOrUndefined(core.getInput('reporters')),
-      reporter: core.getInput('reporter'),
+      reporter: {
+        htmlextra: {
+            export: 'testResults/htmlreport.html',
+            timezone: "Europe/Moscow"
+        }
+      },
       color: getColor(core.getInput('color')),
       sslClientCert: core.getInput('sslClientCert'),
       sslClientKey: core.getInput('sslClientKey'),
