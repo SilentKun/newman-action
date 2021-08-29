@@ -26,7 +26,8 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.6",
-    "newman": "^5.2.3"
+    "newman": "^5.2.3",
+    "newman-reporter-htmlextra": "^1.22.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
